@@ -36,6 +36,15 @@
     <%= f.text_field :city %>
   </div>
 
+  <div class="field">
+    <%= f.label :role_id, "Perfil (Role)" %><br />
+    <%= f.collection_select :role_id,
+         @roles,
+         :id,
+         :name,
+         { prompt: "Selecione um papel" } %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
